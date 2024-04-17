@@ -1,0 +1,12 @@
+2024-03-27 16:45:35.544	info	miniblog/miniblog.go:162	Start to listening the incoming requests on http address	{"addr": ":8080"}
+2024-03-27 16:45:35.544	info	miniblog/miniblog.go:179	Start to listening the incoming requests on https address	{"addr": ":8443"}
+2024-03-27 16:45:35.544	info	miniblog/miniblog.go:205	Start to listening the incoming requests on grpc address	{"addr": ":9090"}
+2024-04-03 17:32:17.145	info	miniblog/miniblog.go:132	Shutting down server ...
+2024-04-03 17:32:17.152	info	miniblog/miniblog.go:150	Server exiting
+2024-04-03 17:32:19.325	info	miniblog/miniblog.go:162	Start to listening the incoming requests on http address	{"addr": ":8080"}
+2024-04-03 17:32:19.325	info	miniblog/miniblog.go:179	Start to listening the incoming requests on https address	{"addr": ":8443"}
+2024-04-03 17:32:19.325	info	miniblog/miniblog.go:205	Start to listening the incoming requests on grpc address	{"addr": ":9090"}
+2024-04-03 17:43:37.460	info	user/create.go:22	Create user function called	{"X-Request-ID": "1091deac-11c4-445e-996b-671467b66131"}
+2024-04-03 17:45:29.587	info	user/login.go:19	Login function called	{"X-Request-ID": "5096b185-faf7-4200-b8fc-476799509724"}
+2024-04-03 17:46:29.983	info	user/login.go:19	Login function called	{"X-Request-ID": "4ae74266-b6e7-4462-9eac-17c4a8cf5d29"}
+2024-04-03 17:46:38.008	info	user/login.go:19	Login function called	{"X-Request-ID": "a3831b75-b640-449a-a17c-fbc5fbad2c2a"}

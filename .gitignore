@@ -62,4 +62,7 @@ tags
 # End of https://www.toptal.com/developers/gitignore/api/linux,vim,go
 
 # Custom
-/_output
+/_output:q
+
+# Ide
+.idea
