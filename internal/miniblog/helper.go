@@ -22,6 +22,8 @@ const (
 	// recommendedHomeDir 定义放置 miniblog 服务配置的默认目录.
 	recommendedHomeDir = ".miniblog"
 
+	recommendedHomeDir_debug = "/Users/jingjllu/Desktop/code/miniblog/configs"
+
 	// defaultConfigName 指定了 miniblog 服务的默认配置文件名.
 	defaultConfigName = "miniblog.yaml"
 )
@@ -42,6 +44,9 @@ func initConfig() {
 
 		// 把当前目录加入到配置文件的搜索路径中
 		viper.AddConfigPath(".")
+
+		// 把当前目录加入到配置文件的搜索路径中
+		viper.AddConfigPath(recommendedHomeDir_debug)
 
 		// 设置配置文件格式为 YAML (YAML 格式清晰易读，并且支持复杂的配置结构)
 		viper.SetConfigType("yaml")
