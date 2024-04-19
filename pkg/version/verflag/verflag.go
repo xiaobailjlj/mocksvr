@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 // Package verflag defines utility functions to handle command line flags
 // related to version of IAM.
@@ -14,7 +14,7 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/marmotedu/miniblog/pkg/version"
+	"miniblog/pkg/version"
 )
 
 type versionValue int

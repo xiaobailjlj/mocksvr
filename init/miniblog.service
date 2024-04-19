@@ -1,6 +1,6 @@
 [Unit]
 Description=APIServer for blog platform.
-Documentation=https://github.com/marmotedu/miniblog/blob/master/init/README.md
+Documentation=https://miniblog/blob/master/init/README.md
 
 [Service]
 ExecStart=/opt/miniblog/bin/miniblog --config=/etc/miniblog/miniblog.yaml

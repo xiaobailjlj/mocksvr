@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 package post
 
@@ -16,9 +16,9 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/likexian/gokit/assert"
 
-	"github.com/marmotedu/miniblog/internal/miniblog/biz"
-	"github.com/marmotedu/miniblog/internal/miniblog/biz/post"
-	v1 "github.com/marmotedu/miniblog/pkg/api/miniblog/v1"
+	"miniblog/internal/miniblog/biz"
+	"miniblog/internal/miniblog/biz/post"
+	v1 "miniblog/pkg/api/miniblog/v1"
 )
 
 type bodyLogWriter struct {

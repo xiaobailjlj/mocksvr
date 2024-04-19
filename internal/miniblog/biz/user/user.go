@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 package user
 
@@ -15,13 +15,13 @@ import (
 	"golang.org/x/sync/errgroup"
 	"gorm.io/gorm"
 
-	"github.com/marmotedu/miniblog/internal/miniblog/store"
-	"github.com/marmotedu/miniblog/internal/pkg/errno"
-	"github.com/marmotedu/miniblog/internal/pkg/log"
-	"github.com/marmotedu/miniblog/internal/pkg/model"
-	v1 "github.com/marmotedu/miniblog/pkg/api/miniblog/v1"
-	"github.com/marmotedu/miniblog/pkg/auth"
-	"github.com/marmotedu/miniblog/pkg/token"
+	"miniblog/internal/miniblog/store"
+	"miniblog/internal/pkg/errno"
+	"miniblog/internal/pkg/log"
+	"miniblog/internal/pkg/model"
+	v1 "miniblog/pkg/api/miniblog/v1"
+	"miniblog/pkg/auth"
+	"miniblog/pkg/token"
 )
 
 // UserBiz 定义了 user 模块在 biz 层所实现的方法.

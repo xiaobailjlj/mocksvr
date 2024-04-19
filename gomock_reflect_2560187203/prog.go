@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -11,7 +10,7 @@ import (
 
 	"github.com/golang/mock/mockgen/model"
 
-	pkg_ "github.com/marmotedu/miniblog/internal/miniblog/store"
+	pkg_ "miniblog/internal/miniblog/store"
 )
 
 var output = flag.String("output", "", "The output file name, or empty to use stdout.")
@@ -19,23 +18,22 @@ var output = flag.String("output", "", "The output file name, or empty to use st
 func main() {
 	flag.Parse()
 
-	its := []struct{
+	its := []struct {
 		sym string
 		typ reflect.Type
 	}{
-		
-		{ "IStore", reflect.TypeOf((*pkg_.IStore)(nil)).Elem()},
-		
-		{ "UserStore", reflect.TypeOf((*pkg_.UserStore)(nil)).Elem()},
-		
-		{ "PostStore", reflect.TypeOf((*pkg_.PostStore)(nil)).Elem()},
-		
+
+		{"IStore", reflect.TypeOf((*pkg_.IStore)(nil)).Elem()},
+
+		{"UserStore", reflect.TypeOf((*pkg_.UserStore)(nil)).Elem()},
+
+		{"PostStore", reflect.TypeOf((*pkg_.PostStore)(nil)).Elem()},
 	}
 	pkg := &model.Package{
 		// NOTE: This behaves contrary to documented behaviour if the
 		// package name is not the final component of the import path.
 		// The reflect package doesn't expose the package name, though.
-		Name: path.Base("github.com/marmotedu/miniblog/internal/miniblog/store"),
+		Name: path.Base("miniblog/internal/miniblog/store"),
 	}
 
 	for _, it := range its {

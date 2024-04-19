@@ -1,8 +1,3 @@
-// Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
-// Use of this source code is governed by a MIT style
-// license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
-
 package miniblog
 
 import (
@@ -21,14 +16,14 @@ import (
 	"github.com/spf13/viper"
 	"google.golang.org/grpc"
 
-	"github.com/marmotedu/miniblog/internal/miniblog/controller/v1/user"
-	"github.com/marmotedu/miniblog/internal/miniblog/store"
-	"github.com/marmotedu/miniblog/internal/pkg/known"
-	"github.com/marmotedu/miniblog/internal/pkg/log"
-	mw "github.com/marmotedu/miniblog/internal/pkg/middleware"
-	pb "github.com/marmotedu/miniblog/pkg/proto/miniblog/v1"
-	"github.com/marmotedu/miniblog/pkg/token"
-	"github.com/marmotedu/miniblog/pkg/version/verflag"
+	"miniblog/internal/miniblog/controller/v1/user"
+	"miniblog/internal/miniblog/store"
+	"miniblog/internal/pkg/known"
+	"miniblog/internal/pkg/log"
+	mw "miniblog/internal/pkg/middleware"
+	pb "miniblog/pkg/proto/miniblog/v1"
+	"miniblog/pkg/token"
+	"miniblog/pkg/version/verflag"
 )
 
 var cfgFile string
@@ -44,7 +39,7 @@ func NewMiniBlogCommand() *cobra.Command {
 		Long: `A good Go practical project, used to create user with basic information.
 
 Find more miniblog information at:
-	https://github.com/marmotedu/miniblog#readme`,
+	https://miniblog#readme`,
 
 		// 命令出错时，不打印帮助信息。不需要打印帮助信息，设置为 true 可以保持命令出错时一眼就能看到错误信息
 		SilenceUsage: true,

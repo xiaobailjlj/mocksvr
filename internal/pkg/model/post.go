@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 package model
 
@@ -10,7 +10,7 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/marmotedu/miniblog/pkg/util/id"
+	"miniblog/pkg/util/id"
 )
 
 // PostM 是数据库中 post 记录 struct 格式的映射.

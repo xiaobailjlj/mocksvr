@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 package main
 
@@ -15,8 +15,8 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/marmotedu/miniblog/internal/pkg/log"
-	pb "github.com/marmotedu/miniblog/pkg/proto/miniblog/v1"
+	"miniblog/internal/pkg/log"
+	pb "miniblog/pkg/proto/miniblog/v1"
 )
 
 var (

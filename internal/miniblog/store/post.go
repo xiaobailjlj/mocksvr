@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 package store
 
@@ -11,7 +11,7 @@ import (
 
 	"gorm.io/gorm"
 
-	"github.com/marmotedu/miniblog/internal/pkg/model"
+	"miniblog/internal/pkg/model"
 )
 
 // PostStore 定义了 post 模块在 store 层所实现的方法.

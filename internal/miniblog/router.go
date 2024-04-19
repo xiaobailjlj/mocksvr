@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 package miniblog
 
@@ -9,14 +9,14 @@ import (
 	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
 
-	"github.com/marmotedu/miniblog/internal/miniblog/controller/v1/post"
-	"github.com/marmotedu/miniblog/internal/miniblog/controller/v1/user"
-	"github.com/marmotedu/miniblog/internal/miniblog/store"
-	"github.com/marmotedu/miniblog/internal/pkg/core"
-	"github.com/marmotedu/miniblog/internal/pkg/errno"
-	"github.com/marmotedu/miniblog/internal/pkg/log"
-	mw "github.com/marmotedu/miniblog/internal/pkg/middleware"
-	"github.com/marmotedu/miniblog/pkg/auth"
+	"miniblog/internal/miniblog/controller/v1/post"
+	"miniblog/internal/miniblog/controller/v1/user"
+	"miniblog/internal/miniblog/store"
+	"miniblog/internal/pkg/core"
+	"miniblog/internal/pkg/errno"
+	"miniblog/internal/pkg/log"
+	mw "miniblog/internal/pkg/middleware"
+	"miniblog/pkg/auth"
 )
 
 // installRouters 安装 miniblog 接口路由.

@@ -1,7 +1,7 @@
 # Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 # Use of this source code is governed by a MIT style
 # license that can be found in the LICENSE file. The original repo for
-# this file is https://github.com/marmotedu/miniblog.
+# this file is https://miniblog.
 
 swagger: "2.0"
 servers:
@@ -553,7 +553,7 @@ components:
           example: 'introduction to a good go practical project: miniblog'
         content:
           type: string
-          example: "Details see https://github.com/marmotedu/miniblog/blob/master/README.md"
+          example: "Details see https://miniblog/blob/master/README.md"
     CreatePostResponse:
       type: object
       properties:
@@ -574,7 +574,7 @@ components:
           example: 'introduction to a good go practical project: miniblog'
         content:
           type: string
-          example: "Details see https://github.com/marmotedu/miniblog/blob/master/README.md"
+          example: "Details see https://miniblog/blob/master/README.md"
         createdAt:
           type: string
           format: date-time
@@ -597,7 +597,7 @@ components:
           example: 'introduction to a good go practical project: miniblog'
         content:
           type: string
-          example: "Details see https://github.com/marmotedu/miniblog/blob/master/README.md"
+          example: "Details see https://miniblog/blob/master/README.md"
         createdAt:
           type: string
           format: date-time
@@ -614,7 +614,7 @@ components:
           example: 'introduction to a good go practical project: miniblog'
         content:
           type: string
-          example: "Details see https://github.com/marmotedu/miniblog/blob/master/README.md"
+          example: "Details see https://miniblog/blob/master/README.md"
     ListPostResponse:
       type: object
       properties:

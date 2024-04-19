@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 // Package log is a log package used by miniblog project.
 package log
@@ -14,7 +14,7 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 
-	"github.com/marmotedu/miniblog/internal/pkg/known"
+	"miniblog/internal/pkg/known"
 )
 
 // Logger 定义了 miniblog 项目的日志接口. 该接口只包含了支持的日志记录方法.

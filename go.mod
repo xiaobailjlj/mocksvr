@@ -1,4 +1,4 @@
-module github.com/marmotedu/miniblog
+module miniblog
 
 go 1.19
 

@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 package miniblog
 
@@ -13,9 +13,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/marmotedu/miniblog/internal/miniblog/store"
-	"github.com/marmotedu/miniblog/internal/pkg/log"
-	"github.com/marmotedu/miniblog/pkg/db"
+	"miniblog/internal/miniblog/store"
+	"miniblog/internal/pkg/log"
+	"miniblog/pkg/db"
 )
 
 const (

@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 syntax = "proto3"; // 告诉编译器此文件使用什么版本的语法
 
@@ -9,7 +9,7 @@ package v1;
 
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/marmotedu/miniblog/pkg/proto/miniblog/v1";
+option go_package = "miniblog/pkg/proto/miniblog/v1";
 
 // MiniBlog 定义了一个 MiniBlog RPC 服务.
 service MiniBlog {

@@ -1,11 +1,11 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 package post
 
-//go:generate mockgen -destination mock_post.go -package post github.com/marmotedu/miniblog/internal/miniblog/biz/post PostBiz
+//go:generate mockgen -destination mock_post.go -package post miniblog/internal/miniblog/biz/post PostBiz
 
 import (
 	"context"
@@ -14,11 +14,11 @@ import (
 	"github.com/jinzhu/copier"
 	"gorm.io/gorm"
 
-	"github.com/marmotedu/miniblog/internal/miniblog/store"
-	"github.com/marmotedu/miniblog/internal/pkg/errno"
-	"github.com/marmotedu/miniblog/internal/pkg/log"
-	"github.com/marmotedu/miniblog/internal/pkg/model"
-	v1 "github.com/marmotedu/miniblog/pkg/api/miniblog/v1"
+	"miniblog/internal/miniblog/store"
+	"miniblog/internal/pkg/errno"
+	"miniblog/internal/pkg/log"
+	"miniblog/internal/pkg/model"
+	v1 "miniblog/pkg/api/miniblog/v1"
 )
 
 // PostBiz defines functions used to handle post request.

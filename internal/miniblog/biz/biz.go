@@ -1,16 +1,16 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 package biz
 
-//go:generate mockgen -destination mock_biz.go -package biz github.com/marmotedu/miniblog/internal/miniblog/biz IBiz
+//go:generate mockgen -destination mock_biz.go -package biz miniblog/internal/miniblog/biz IBiz
 
 import (
-	"github.com/marmotedu/miniblog/internal/miniblog/biz/post"
-	"github.com/marmotedu/miniblog/internal/miniblog/biz/user"
-	"github.com/marmotedu/miniblog/internal/miniblog/store"
+	"miniblog/internal/miniblog/biz/post"
+	"miniblog/internal/miniblog/biz/user"
+	"miniblog/internal/miniblog/store"
 )
 
 // IBiz 定义了 Biz 层需要实现的方法.

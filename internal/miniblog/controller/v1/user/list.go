@@ -1,7 +1,7 @@
 // Copyright 2022 Innkeeper Belm(孔令飞) <nosbelm@qq.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/marmotedu/miniblog.
+// this file is https://miniblog.
 
 package user
 
@@ -12,11 +12,11 @@ import (
 	"github.com/gin-gonic/gin"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/marmotedu/miniblog/internal/pkg/core"
-	"github.com/marmotedu/miniblog/internal/pkg/errno"
-	"github.com/marmotedu/miniblog/internal/pkg/log"
-	v1 "github.com/marmotedu/miniblog/pkg/api/miniblog/v1"
-	pb "github.com/marmotedu/miniblog/pkg/proto/miniblog/v1"
+	"miniblog/internal/pkg/core"
+	"miniblog/internal/pkg/errno"
+	"miniblog/internal/pkg/log"
+	v1 "miniblog/pkg/api/miniblog/v1"
+	pb "miniblog/pkg/proto/miniblog/v1"
 )
 
 // List 返回用户列表，只有 root 用户才能获取用户列表.
