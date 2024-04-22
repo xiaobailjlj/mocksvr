@@ -82,3 +82,42 @@ CREATE TABLE `user` (
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2022-12-02  0:12:03
+
+
+
+
+CREATE TABLE `stub_interface` (
+                                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                                  `url` varchar(128) NOT NULL,
+                                  `def_resp_code` varchar(16) DEFAULT NULL,
+                                  `def_resp_header` varchar(50) DEFAULT NULL,
+                                  `def_resp_body` mediumtext,
+                                  `owner` varchar(64) DEFAULT NULL,
+                                  `desc` varchar(1024) DEFAULT NULL,
+                                  `meta` varchar(1024) DEFAULT NULL,
+                                  `status` varchar(128) NOT NULL,
+                                  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                                  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                                  PRIMARY KEY (`id`),
+                                  UNIQUE KEY `url`(`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='interface';
+
+
+
+CREATE TABLE `stub_rule` (
+                             `id` int(11) NOT NULL AUTO_INCREMENT,
+                             `interface_id` int(11) NOT NULL,
+                             `match_type` int(11) NOT NULL COMMENT '1:match request query url, 2:match request body',
+                             `match_rule` varchar(512) DEFAULT NULL,
+                             `resp_code` varchar(16) DEFAULT NULL,
+                             `resp_header` varchar(50) DEFAULT NULL,
+                             `resp_body` mediumtext,
+                             `delay_time` int(11) DEFAULT '0' COMMENT 'ms',
+                             `desc` varchar(1024) DEFAULT NULL,
+                             `meta` varchar(1024) DEFAULT NULL,
+                             `status` varchar(128) NOT NULL,
+                             `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                             `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+                             PRIMARY KEY (`id`),
+                             KEY `interface_id`(`interface_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='rule';

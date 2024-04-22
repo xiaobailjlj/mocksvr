@@ -22,3 +22,8 @@
 2024-04-19 17:02:08.612	info	miniblog/miniblog.go:200	Start to listening the incoming requests on grpc address	{"addr": ":9090"}
 2024-04-19 17:02:11.453	info	miniblog/miniblog.go:127	Shutting down server ...
 2024-04-19 17:02:11.453	info	miniblog/miniblog.go:145	Server exiting
+2024-04-22 15:07:05.132	info	miniblog/miniblog.go:157	Start to listening the incoming requests on http address	{"addr": ":8080"}
+2024-04-22 15:07:05.133	info	miniblog/miniblog.go:174	Start to listening the incoming requests on https address	{"addr": ":8443"}
+2024-04-22 15:07:05.133	info	miniblog/miniblog.go:200	Start to listening the incoming requests on grpc address	{"addr": ":9090"}
+2024-04-22 15:07:07.027	info	miniblog/miniblog.go:127	Shutting down server ...
+2024-04-22 15:07:07.027	info	miniblog/miniblog.go:145	Server exiting
