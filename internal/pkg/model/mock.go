@@ -11,7 +11,7 @@ const TableNameStubInterface = "stub_interface"
 const TableNameStubRule = "stub_rule"
 
 // StubInterface mapped from table <stub_interface>
-type StubInterface struct {
+type StubInterfaceM struct {
 	ID            int32     `gorm:"column:id;primaryKey;autoIncrement:true" json:"id"`
 	URL           string    `gorm:"column:url;not null" json:"url"`
 	DefRespCode   string    `gorm:"column:def_resp_code" json:"def_resp_code"`
@@ -26,12 +26,12 @@ type StubInterface struct {
 }
 
 // TableName StubInterface's table name
-func (*StubInterface) TableName() string {
+func (*StubInterfaceM) TableName() string {
 	return TableNameStubInterface
 }
 
 // StubRule mapped from table <stub_rule>
-type StubRule struct {
+type StubRuleM struct {
 	ID          int32     `gorm:"column:id;primaryKey;autoIncrement:true" json:"id"`
 	InterfaceID int32     `gorm:"column:interface_id;not null" json:"interface_id"`
 	MatchType   int32     `gorm:"column:match_type;not null;comment:1:match request query url, 2:match request body" json:"match_type"` // 1:match request query url, 2:match request body
@@ -48,6 +48,6 @@ type StubRule struct {
 }
 
 // TableName StubRule's table name
-func (*StubRule) TableName() string {
+func (*StubRuleM) TableName() string {
 	return TableNameStubRule
 }
