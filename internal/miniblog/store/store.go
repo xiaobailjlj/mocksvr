@@ -5,7 +5,7 @@
 
 package store
 
-//go:generate mockgen -destination mock_store.go -package store miniblog/internal/miniblog/store IStore,UserStore,PostStore
+//go:generate mockgen -destination mock_store.go -package store miniblog/internal/miniblog/store IStore,UserStore,PostStore,StubInterfaceStore
 
 import (
 	"sync"
@@ -24,6 +24,8 @@ type IStore interface {
 	DB() *gorm.DB
 	Users() UserStore
 	Posts() PostStore
+	StubRule() StubRuleStore
+	StubInterface() StubInterfaceStore
 }
 
 // datastore 是 IStore 的一个具体实现.
@@ -57,4 +59,14 @@ func (ds *datastore) Users() UserStore {
 // Posts 返回一个实现了 PostStore 接口的实例.
 func (ds *datastore) Posts() PostStore {
 	return newPosts(ds.db)
+}
+
+// Posts 返回一个实现了 PostStore 接口的实例.
+func (ds *datastore) StubRule() StubRuleStore {
+	return newStubRules(ds.db)
+}
+
+// Posts 返回一个实现了 PostStore 接口的实例.
+func (ds *datastore) StubInterface() StubInterfaceStore {
+	return newStubInterfaces(ds.db)
 }
