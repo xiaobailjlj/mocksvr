@@ -10,6 +10,7 @@
 package biz
 
 import (
+	"miniblog/internal/miniblog/biz/stub"
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
@@ -67,4 +68,10 @@ func (m *MockIBiz) Users() user.UserBiz {
 func (mr *MockIBizMockRecorder) Users() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Users", reflect.TypeOf((*MockIBiz)(nil).Users))
+}
+
+
+func (m *MockIBiz) Stubs() stub.StubBiz {
+	//TODO implement me
+	panic("implement me")
 }

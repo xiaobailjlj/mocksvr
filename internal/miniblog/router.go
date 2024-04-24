@@ -8,6 +8,9 @@ package miniblog
 import (
 	"github.com/gin-contrib/pprof"
 	"github.com/gin-gonic/gin"
+	mw "miniblog/internal/pkg/middleware"
+	"miniblog/pkg/auth"
+	"net/http"
 
 	"miniblog/internal/miniblog/controller/v1/post"
 	"miniblog/internal/miniblog/controller/v1/stub"
@@ -16,8 +19,6 @@ import (
 	"miniblog/internal/pkg/core"
 	"miniblog/internal/pkg/errno"
 	"miniblog/internal/pkg/log"
-	mw "miniblog/internal/pkg/middleware"
-	"miniblog/pkg/auth"
 )
 
 // installRouters 安装 miniblog 接口路由.
@@ -73,12 +74,20 @@ func installRouters(g *gin.Engine) error {
 			postv1.GET("", pc.List)                // 获取博客列表
 			postv1.DELETE(":postID", pc.Delete)    // 删除博客
 		}
+
+		//创建 stubs 路由分组
 		stubv1 := v1.Group("/stub")
 		{
-			stubv1.POST("interface", sc.CreateStubInterface) // 创建接口
-			stubv1.POST(":rule", sc.CreateStubRule)          // 创建规则
+			stubv1.POST("/interface", sc.CreateStubInterface) // 创建接口
+			stubv1.POST("/rule", sc.CreateStubRule)           // 创建规则
 		}
 	}
 
 	return nil
+}
+
+func testhandler(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"test": "这是路由注册的测试",
+	})
 }

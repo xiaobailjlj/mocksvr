@@ -1,6 +1,6 @@
 package v1
 
-// CreateStubInterfaceRequest 指定了 `POST /v1/posts` 接口的请求参数.
+// CreateStubInterfaceRequest
 type CreateStubInterfaceRequest struct {
 	Url           string `json:"url" valid:"required,stringlength(1|128)"`
 	DefRespCode   string `json:"def_resp_code" valid:"required,stringlength(1|16)"`
@@ -10,7 +10,7 @@ type CreateStubInterfaceRequest struct {
 	Desc          string `json:"desc,omitempty"`
 }
 
-// CreateStubRuleeRequest 指定了 `POST /v1/posts` 接口的请求参数.
+// CreateStubRuleeRequest
 type CreateStubRuleRequest struct {
 	Url         string `json:"url" valid:"required,stringlength(1|128)"`
 	InterfaceId int32  `json:"interface_id" valid:"required"`
