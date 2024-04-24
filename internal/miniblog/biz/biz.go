@@ -9,6 +9,7 @@ package biz
 
 import (
 	"miniblog/internal/miniblog/biz/post"
+	"miniblog/internal/miniblog/biz/stub"
 	"miniblog/internal/miniblog/biz/user"
 	"miniblog/internal/miniblog/store"
 )
@@ -17,6 +18,7 @@ import (
 type IBiz interface {
 	Users() user.UserBiz
 	Posts() post.PostBiz
+	Stubs() stub.StubBiz
 }
 
 // 确保 biz 实现了 IBiz 接口.
@@ -43,4 +45,9 @@ func (b *biz) Users() user.UserBiz {
 // Posts 返回一个实现了 PostBiz 接口的实例.
 func (b *biz) Posts() post.PostBiz {
 	return post.New(b.ds)
+}
+
+// Stubs 返回一个实现了 StubBiz 接口的实例.
+func (b *biz) Stubs() stub.StubBiz {
+	return stub.New(b.ds)
 }

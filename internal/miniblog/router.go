@@ -10,6 +10,7 @@ import (
 	"github.com/gin-gonic/gin"
 
 	"miniblog/internal/miniblog/controller/v1/post"
+	"miniblog/internal/miniblog/controller/v1/stub"
 	"miniblog/internal/miniblog/controller/v1/user"
 	"miniblog/internal/miniblog/store"
 	"miniblog/internal/pkg/core"
@@ -43,6 +44,7 @@ func installRouters(g *gin.Engine) error {
 
 	uc := user.New(store.S, authz)
 	pc := post.New(store.S)
+	sc := stub.New(store.S)
 
 	g.POST("/login", uc.Login)
 
@@ -70,6 +72,11 @@ func installRouters(g *gin.Engine) error {
 			postv1.DELETE("", pc.DeleteCollection) // 批量删除博客
 			postv1.GET("", pc.List)                // 获取博客列表
 			postv1.DELETE(":postID", pc.Delete)    // 删除博客
+		}
+		stubv1 := v1.Group("/stub")
+		{
+			stubv1.POST("interface", sc.CreateStubInterface) // 创建接口
+			stubv1.POST(":rule", sc.CreateStubRule)          // 创建规则
 		}
 	}
 
