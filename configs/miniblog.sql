@@ -87,10 +87,10 @@ CREATE TABLE `user` (
 
 
 CREATE TABLE `stub_interface` (
-                                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                                  `id` int(32) NOT NULL AUTO_INCREMENT,
                                   `url` varchar(128) NOT NULL,
                                   `def_resp_code` varchar(16) DEFAULT NULL,
-                                  `def_resp_header` varchar(50) DEFAULT NULL,
+                                  `def_resp_header` varchar(64) DEFAULT NULL,
                                   `def_resp_body` mediumtext,
                                   `owner` varchar(64) DEFAULT NULL,
                                   `desc` varchar(1024) DEFAULT NULL,
@@ -105,14 +105,14 @@ CREATE TABLE `stub_interface` (
 
 
 CREATE TABLE `stub_rule` (
-                             `id` int(11) NOT NULL AUTO_INCREMENT,
-                             `interface_id` int(11) NOT NULL,
-                             `match_type` int(11) NOT NULL COMMENT '1:match request query url, 2:match request body',
+                             `id` int(32) NOT NULL AUTO_INCREMENT,
+                             `interface_id` int(32) NOT NULL,
+                             `match_type` int(32) NOT NULL COMMENT '1:match request query url, 2:match request body',
                              `match_rule` varchar(512) DEFAULT NULL,
                              `resp_code` varchar(16) DEFAULT NULL,
-                             `resp_header` varchar(50) DEFAULT NULL,
+                             `resp_header` varchar(64) DEFAULT NULL,
                              `resp_body` mediumtext,
-                             `delay_time` int(11) DEFAULT '0' COMMENT 'ms',
+                             `delay_time` int(32) DEFAULT '0' COMMENT 'ms',
                              `desc` varchar(1024) DEFAULT NULL,
                              `meta` varchar(1024) DEFAULT NULL,
                              `status` varchar(128) NOT NULL,
